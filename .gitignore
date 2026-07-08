@@ -1,0 +1,21 @@
+# System
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data - ignore raw and processed (regenerable via notebooks, link raw source in README)
+data/raw/*.csv
+data/processed/*.csv
+
+# Models - these can get large
+models/*.pkl
+models/*.joblib
