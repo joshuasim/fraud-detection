@@ -13,8 +13,8 @@ env/
 .ipynb_checkpoints/
 
 # Data - ignore raw and processed (regenerable via notebooks, link raw source in README)
-data/raw/*.csv
-data/processed/*.csv
+data/raw/
+data/processed/
 
 # Models - these can get large
 models/*.pkl
