@@ -44,6 +44,8 @@ Fraud detection is hard not only because fraud is rare (~0.13% of transactions h
 
 ![PR and ROC Curve Comparison](images/pr_roc_comparison.png)
 
+RF and LR look far closer on the ROC curve (AUC 0.98 vs. 0.96) than they actually are — the PR curve reveals the real gap (PR-AUC 0.91 vs. 0.18), since ROC-AUC is inflated by the large number of true negatives under severe class imbalance. This is why PR-AUC, not ROC-AUC, was used to judge model performance throughout this project.
+
 ---
 
 ## Project Structure
@@ -127,9 +129,9 @@ cd fraud-detection
 pip install -r requirements.txt
 ```
 2. Create the data folders: 
-   ```bash
-   mkdir -p data/raw data/processed
-   ```
+```bash
+mkdir -p data/raw data/processed
+```
 3. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/moonknightmarvel/paysim) and place `paysim.csv` in `data/raw/`
 
 4. Run notebooks in order:
